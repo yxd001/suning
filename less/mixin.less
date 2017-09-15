@@ -1,0 +1,13 @@
+/*mixin*/
+//生成适配代码
+//迭代 完成一次调用  调用自己
+// @index 序号   less通过序号获取数组当中的值
+.adapterFuc(@index) when (@index <= @len){
+  //extract()提取数组当中序号为多少的值
+  @media (min-width: extract(@adapterDevice,@index)) {
+    html{
+      font-size: extract(@adapterDevice,@index)/@psdWidth*@baseSize;
+    }
+  }
+  .adapterFuc(@index + 1);
+}

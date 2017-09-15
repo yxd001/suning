@@ -1,0 +1,269 @@
+/*引入less*/
+/*变量*/
+/*适配机型*/
+/*设计稿 750px*/
+/*基数*/
+/* base */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #333;
+}
+ul {
+  list-style: none;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+/*mixin*/
+@media (min-width: 320px) {
+  html {
+    font-size: 42.66666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 56.53333333px;
+  }
+}
+@media (min-width: 450px) {
+  html {
+    font-size: 60px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 72px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 85.33333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+/*模块*/
+/*版心*/
+.sn_banxin {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.sn_top {
+  width: 100%;
+  height: 0.9rem;
+  background: #fabc09;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.sn_top a {
+  position: absolute;
+  top: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.sn_top a.icon_category {
+  left: 0;
+  background: url("../images/icon_category.png") no-repeat center / 0.44rem 0.7rem;
+}
+.sn_top a.icon_cart {
+  right: 0;
+  background: url("../images/icon_cart.png") no-repeat center / 0.63rem 0.68rem;
+}
+.sn_top form {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  width: 100%;
+  position: relative;
+}
+.sn_top form input {
+  width: 100%;
+  height: 0.6rem;
+  display: block;
+  margin-top: 0.15rem;
+  border-radius: 0.15rem;
+  padding-left: 0.4rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+.sn_top form .sn_icon {
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0.15rem;
+  left: 1rem;
+  background: url("../images/icon_search.png") no-repeat center / 0.27rem 0.28rem;
+}
+/*轮播图*/
+.sn_banner {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 0.9rem;
+  position: relative;
+}
+.sn_banner ul:first-child {
+  width: 1000%;
+  transform: translateX(-10%);
+}
+.sn_banner ul:first-child li {
+  width: 10%;
+  float: left;
+}
+.sn_banner ul:first-child li a {
+  display: block;
+  width: 100%;
+}
+.sn_banner ul:first-child li img {
+  display: block;
+  width: 100%;
+}
+.sn_banner ul:last-child {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+}
+.sn_banner ul:last-child li {
+  width: 0.12rem;
+  height: 0.12rem;
+  border-radius: 0.06rem;
+  background: #fff;
+  float: left;
+  margin-left: 0.1rem;
+}
+.sn_banner ul:last-child li.now {
+  background-color: #fabc09;
+}
+/*导航*/
+.sn_nav {
+  width: 100%;
+}
+.sn_nav ul {
+  width: 100%;
+}
+.sn_nav ul li {
+  width: 20%;
+  float: left;
+}
+.sn_nav ul li a {
+  width: 100%;
+  display: block;
+}
+.sn_nav ul li img {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+}
+.sn_nav ul li p {
+  text-align: center;
+  margin-top: 0.1rem;
+}
+/*底部tab切换*/
+.sn_tab {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 1rem;
+  background-color: #ffffff;
+}
+.sn_tab ul {
+  width: 100%;
+  border-top: 1px solid #CCCCCC;
+}
+.sn_tab ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+}
+.sn_tab ul li a {
+  display: block;
+  width: 100%;
+}
+.sn_tab ul li .fa {
+  font-size: 0.4rem;
+}
+.sn_tab ul li p {
+  text-align: center;
+  font-size: 0.2rem;
+  padding-top: 0.1rem;
+}
